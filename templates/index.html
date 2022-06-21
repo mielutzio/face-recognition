@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href=../static/main.css>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../static/main.js"></script>
+  <title>ACS</title>
+</head>
+
+<body>
+  {% block body %}
+  {% if em %}
+  <script>
+    alert('ERROR! (run preprocessing first)')
+  </script>
+  {% endif %}
+  <div class="center">
+    <div class="inline1">
+      <form method="POST" action="/"><br>
+        
+        <label class="header">Data Base</label>
+        <input type="radio" class="db" id="db1" name="db" value="orl">
+        <label for="db1">ORL</label><br>
+
+        <div class="cdbradios">
+          <label class="header">Data Base Configuration</label>
+          <input type="radio" class="db_config" id="db_config1" name="db_config" value="6to4">
+          <label for="db_config1">60% training 40% testing</label><br>
+          <p class="p1">for better results select 7.pgm, 8.pgm, 9.pgm, 10.pgm when testing</p>
+          <input type="radio" class="db_config" id="db_config2" name="db_config" value="8to2">
+          <label for="db_config2">80% training 20% testing</label><br>
+          <p class="p2">for better results select 9.pgm, 10.pgm when testing</p>
+          <input type="radio" class="db_config" id="db_config3" name="db_config" value="9to1">
+          <label for="db_config3">90% training 10% testing</label><br>
+          <p class="p3">for better results select 10.pgm when testing</p>
+        </div>
+
+        <label class="header">Algorithm</label>
+        <input type="radio" class="alg" id="alg1" name="alg" value="nn">
+        <label for="alg1">NN </label><br>
+        <input type="radio" class="alg" id="alg2" name="alg" value="knn">
+        <label for="alg2">kNN </label>
+        <select name='kn' class='kval1'>
+          <option value='3' selected="selected">3</option>
+          <option value='5' selected="selected">5</option>
+          <option value='7' selected="selected">7</option>
+        </select><br>
+        <input type="radio" class="alg" id="alg3" name="alg" value="eigenfaces">
+        <label for="alg3">Eigenfaces </label>
+        <select name='ke' class='kval2'>
+          <option value='20' selected="selected">20</option>
+          <option value='40' selected="selected">40</option>
+          <option value='60' selected="selected">60</option>
+          <option value='80' selected="selected">80</option>
+          <option value='100' selected="selected">100</option>
+        </select><br>
+        <input type="radio" class="alg" id="alg4" name="alg" value="lanczos">
+        <label for="alg4">Lanczos </label>
+        <select name='kl' class='kval3'>
+          <option value='20' selected="selected">20</option>
+          <option value='40' selected="selected">40</option>
+          <option value='60' selected="selected">60</option>
+          <option value='80' selected="selected">80</option>
+          <option value='100' selected="selected">100</option>
+        </select><br>
+
+        <input class="ppbtn" type="submit" name="sbtn" value="Preprocessing"><br>
+
+        <div class="normradios">
+          <label class="header">Norm</label>
+          <input type="radio" class="norm" id="norm1" name="norm" value="n1">
+          <label for="norm1">Manhattan</label><br>
+          <input type="radio" class="norm" id="norm2" name="norm" value="n2">
+          <label for="norm2">Euclidean</label><br>
+          <input type="radio" class="norm" id="norm3" name="norm" value="ninf">
+          <label for="norm3">Infinite</label><br>
+          <input type="radio" class="norm" id="norm4" name="norm" value="ncos">
+          <label for="norm4">Cosinus</label><br>
+        </div>
+
+        <input class="searchbtn" type="submit" name="sbtn" value="Search">
+        <input class="statsbtn" type="submit" name="sbtn" value="Statistics">
+      </form>
+    </div>
+    <div class="inline">
+      <img src="../static/images/test.png" alt="database photo" class="algimg">
+      <form action="/" method="POST" enctype="multipart/form-data">
+        <input class="openfilebtn" type="file" name="file" autocomplete="off" required>
+        <input class="selectbtn" type="submit" name="sbtn" value="Select">
+      </form>
+    </div>
+    <div class="inline">
+      <img src="../static/images/result.png" alt="calculated image" class="algimg">
+      <form action="/" method="POST">
+
+      </form>
+    </div>
+  </div>
+  {% endblock %}
+</body>
+
+</html>

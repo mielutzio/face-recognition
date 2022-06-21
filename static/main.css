@@ -1,0 +1,218 @@
+body{
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("images/background.png");
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.center{
+    width: 1100px;
+	height: 600px;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+    padding: 10px;
+}
+p{
+    color: rgba(70, 0, 0, 0.658);
+    font-size:small;
+    margin-top: -3px;
+    margin-bottom: -3px;
+}
+.inline{
+    margin-top: 30px;
+    margin-left: 10px;
+    float: left;
+    width: 410px;
+    height: 500px;
+}
+.inline1{
+    float: left;
+    margin-left: 5px;
+    margin-top: -10px;
+    width: 250px;
+    height: 410px;
+    color: black;
+}
+.inline2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 450px;
+    height: 410px;
+}
+.openfilebtn{
+    width: 220px;
+    margin-left: -250px;
+    position: absolute;
+    bottom: 15% ;
+    background-color: #282b4693;
+    border: none;
+    color: white;
+    padding: 2px 5px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+.openfilebtn:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    border: solid #0000006e 1px;
+    border-radius: 5px;
+}
+.selectbtn{
+    position: absolute;
+    margin-left:-250px;
+    bottom: 5%;
+    background-color: #282b4693;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+.selectbtn:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    border: solid #0000006e 1px;
+    border-radius: 5px;
+}
+.searchbtn{
+    position: absolute;
+    margin-left:150px;
+    bottom: 5%;
+    background-color: #282b4693;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+.searchbtn:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    border: solid #0000006e 1px;
+    border-radius: 5px;
+}
+.statsbtn{
+    position: absolute;
+    margin-left:980px;
+    bottom: 5%;
+    background-color: #282b4693;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+.statsbtn:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    border: solid #0000006e 1px;
+    border-radius: 5px;
+}
+.ppbtn{
+    position: absolute;
+    margin-left:50px;
+    background-color: #282b4693;
+    border: none;
+    color: white;
+    margin-top: 3px;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+.ppbtn:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    border: solid #0000006e 1px;
+    border-radius: 5px;
+}
+.header{
+    display:block;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.algimg{
+    width: 410px;
+    height: 410px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+/* Hide the images by default */
+.mySlides {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 5px;
+    display: none;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
